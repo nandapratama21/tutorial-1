@@ -169,8 +169,8 @@ public class ProductRepositoryTest {
 
         Product editedProduct = new Product();
         product2.setProductId("editedId");
-        product2.setProductName("Sampo Cap PAYO");
-        product2.setProductQuantity(1000);
+        product2.setProductName("Sampo Cap A");
+        product2.setProductQuantity(500);
 
         productRepository.edit(editedProduct, product2.getProductId());
         assertEquals(editedProduct.getProductName(), product2.getProductName());
