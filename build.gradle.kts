@@ -21,7 +21,10 @@ repositories {
     mavenCentral()
 }
 
-
+val seleniumJavaVersion = "4.14.1"
+val seleniumJupiterVersion = "5.0.1"
+val webdrivermanagerVersion = "5.6.3"
+val junitJupiterVersion = "5.9.1"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
@@ -38,10 +41,7 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
-val seleniumJavaVersion = "4.14.1"
-val seleniumJupiterVersion = "5.0.1"
-val webdrivermanagerVersion = "5.6.3"
-val junitJupiterVersion = "5.9.1"
+
 
 tasks.register<Test>("unitTest") {
     description = "Runs unit tests."
