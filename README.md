@@ -14,3 +14,11 @@ _programmer_ lainnya. Konsep _clean code_ yang saya terapkan di antaranya adalah
 _meaningful_, meminimalisir penggunaan _comment_, dan penamaan _function_ yang _meaningful_.<br>
 
 Untuk bagian _secure coding_, saya baru ingin melakukan implementasi _access control_ untuk POST dan DELETE.  <br>
+
+
+<h3>Reflection 2</h3>
+
+1. Setelah saya membuat unit test, saya lebih bisa memverifikasi kebenaran pada kode saya, sehingga dapat membantu mengatasi jika terjadi kesalahan kode dan mempermudah mengatasinya.
+2. Meskipun kode kita memiliki 100% code coverage, bukan berarti kode kita sudah dipastikan terbebas dari _bug_ dan _error_, karena bisa saja terdapat _bug_ yang sulit dideteksi sehingga _unit test_ tidak memverifikasi hal tersebut.
+3. Saya mempelajari banyak hal ketika membuat Functional Test, terutama pada Selenium WebDriver, terutama mengenai interaksi elemen-elemen pada halaman _web_.
+
