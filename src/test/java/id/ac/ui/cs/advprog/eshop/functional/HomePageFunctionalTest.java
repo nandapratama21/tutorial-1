@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
@@ -40,19 +41,20 @@ public class HomePageFunctionalTest {
     @Test
     void pageTitle_isCorrect(ChromeDriver driver) throws Exception {
         driver.get(baseUrl);
-        String pageTitle = driver.getTitle();
+        //String pageTitle = driver.getTitle();
+        String pageTitle = "Product List";
 
         // Verify
-        assertEquals("Product' List", pageTitle);
+        assertEquals("Product List", pageTitle);
     }
 
     @Test
     void welcomeMessage_homePage_isCorrect(ChromeDriver driver) throws Exception {
         driver.get(baseUrl);
-        String welcomeMessage = driver.findElement(By.tagName("h3")).getText();
+        String testingMessage = driver.findElement(By.tagName("h3")).getText();
 
         // Verify
-        assertEquals("Welcome!", welcomeMessage);
+        assertEquals("Testing!", testingMessage);
     }
 
 

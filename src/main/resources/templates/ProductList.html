@@ -16,12 +16,24 @@
         <tr>
             <th scope="col">Product Name</th>
             <th scope="col">Quantity</th>
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="product: ${products}">
             <td th:text="${product.productName}"></td>
             <td th:text="${product.productQuantity}"></td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <form th:action="@{/product/edit/{id}(id=${product.productId})}" method="get">
+                        <button type="submit" class="btn btn-warning">Edit</button>
+                    </form>
+                    <span style="margin-right: 5px;"></span>
+                    <form th:action="@{/product/delete/{id}(id=${product.productId})}" method="get">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </td>
         </tr>
         </tbody>
     </table>
