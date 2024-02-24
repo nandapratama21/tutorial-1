@@ -38,16 +38,20 @@ Untuk bagian _secure coding_, saya baru ingin melakukan implementasi _access con
 <h1>TUTORIAL 3</h1>
 
 1) Explain what principles you apply to your project!
-Jawaban: - Saya mengimplementasikan Single Responsibility Principle (SRP) dengan memisahkan Car dari ProductController menjadi dua file, yaitu CarController dan ProductController.
+  
+Jawaban: 
+- Saya mengimplementasikan Single Responsibility Principle (SRP) dengan memisahkan Car dari ProductController menjadi dua file, yaitu CarController dan ProductController.
 - Pada Open-Closed Principle (OCP), saya sudah melakukannya ketika membuat package repository dan service. Pada class CarController, CarService menggunakan interface, bukan menggunakan class seperti CarServiceImpl.
 - Pada Liskov substitution principle (LSP), saya tidak perlu melakukan inheritance pada CarController dengan ProductController, karena sudah ada interface CarService.
 - Pada Interface segregation principle (ISP), saya menerapkannya dengan memisahkan CarServiceImpl dan ProductServiceImpl, yang mana tiap dari kedua file tersebut sudah diimplementasikan dari interface yang sudah ada untuk kedua file tersebut.
 - Pada Dependency inversion principle (DIP), saya menerapkannya dengan membuat interface ProductService dan CarService, kemudian menggunakannya sebagai atribut di file java yang berbeda.
 
 2) Explain the advantages of applying SOLID principles to your project with examples.
+  
 Jawaban: Keuntungan dari menerapkan SOLID principles ini adalah mempermudah dalam maintain kode saya. Kemudian kode saya juga lebih terskruktur, rapi, dan lebih scalable.
 
 3) Explain the disadvantages of not applying SOLID principles to your project with examples.
+  
 Jawaban: Tidak menerapkan SOLID principles dapat menyebabkan kesulitan pada kode kita karena lebih sulit di maintain. Sebagai contoh, ketika kita tidak mematuhi prinsip Single Responsibility Principle (SRP), file-file kelas Java menjadi semakin kompleks dan sulit untuk diatasi saat terjadi masalah. Misalnya, jika kita mengalami masalah terkait dengan objek 'Car', kita harus menyunting satu file ProductController yang mungkin juga menangani entitas lain. Hal ini dapat menyebabkan kesulitan dalam mengidentifikasi dan memperbaiki masalah yang bersifat spesifik pada 'Car', karena kita harus berhati-hati agar perubahan yang kita lakukan tidak berdampak negatif pada bagian lain yang tidak terkait dengan 'Car'.
 
 
