@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 21
-          distribution: 'zulu'
+          distribution: 'temurin'
       - name: Cache SonarCloud packages
         uses: actions/cache@v3
         with:
@@ -31,9 +31,8 @@ jobs:
           restore-keys: ${{ runner.os }}-gradle
       - name: Set gradlew as executable
         run: chmod +x ./gradlew
-      - name: Generate code coverage
-        run: ./gradlew test
       - name: Build and analyze
         env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew build sonar --info
