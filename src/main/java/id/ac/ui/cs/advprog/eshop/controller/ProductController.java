@@ -59,7 +59,7 @@ public class ProductController {
     }
     @Controller
     @RequestMapping("/car")
-    public class CarController {
+    class CarController extends ProductController {
 
         @Autowired
         private CarService carService;
@@ -105,3 +105,4 @@ public class ProductController {
         }
     }
 }
+
