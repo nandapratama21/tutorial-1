@@ -84,7 +84,7 @@ public class PaymentTest {
         assertEquals(PaymentMethod.VOUCHER_CODE.getValue(), payment.getMethod());
         assertEquals(PaymentStatus.SUCCESS.getValue(), payment.getStatus());
         assertSame(this.paymentData, payment.getPaymentData());
-        
+
     }
 
     @Test
