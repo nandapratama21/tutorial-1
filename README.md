@@ -55,3 +55,31 @@ Jawaban: Keuntungan dari menerapkan SOLID principles ini adalah mempermudah dala
 Jawaban: Tidak menerapkan SOLID principles dapat menyebabkan kesulitan pada kode kita karena lebih sulit di maintain. Sebagai contoh, ketika kita tidak mematuhi prinsip Single Responsibility Principle (SRP), file-file kelas Java menjadi semakin kompleks dan sulit untuk diatasi saat terjadi masalah. Misalnya, jika kita mengalami masalah terkait dengan objek 'Car', kita harus menyunting satu file ProductController yang mungkin juga menangani entitas lain. Hal ini dapat menyebabkan kesulitan dalam mengidentifikasi dan memperbaiki masalah yang bersifat spesifik pada 'Car', karena kita harus berhati-hati agar perubahan yang kita lakukan tidak berdampak negatif pada bagian lain yang tidak terkait dengan 'Car'.
 
 
+<h1>TUTORIAL 4</h1>
+
+1) Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this TDD flow is useful enough for you or not. If not, explain things that you need to do next time you make more tests.
+
+Jawaban: 
+
+Correctness:  
+- Do I have enough functional tests to reassure myself that my application really works, from point of view of the user? Yes.
+- Am I testing all edge cases thoroughly? Yes.
+- Do I have tests that check whether all my components fit together properly? Could some integrated tests do this, or are functional tests enough? Yes. Functional tests are enough to this.
+
+Maintainability:
+- Are my tests giving me the confidence to refactor my code, fearlessly and frequently? Yes
+- Are my tests helping me to drive out a good design? If I have a lot of integration tests but less unit tests, do I need to make more unit tests to get better feedback on my code design? Yes, it will be better to make more unit tests to get better feedback.
+
+Production workflow:
+- Are my feedback cycles as fast as I would like them? When do I get warned about bugs, and is there any practical way to make that happen sooner? Yes, but the code now has no problems, so I didn't change it.
+- Is there some way that I could write faster integration tests that would give me feedback quicker? Refactor tests.
+- Can I run a subset of the full test suite when I need to? Yes.
+- Am I spending to much time waiting for tests to run, and thus less time in a productive flow state? No.
+
+2) You have created unit tests in Tutorial. Now reflect whether your tests have successfully followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you create more tests.
+
+Jawaban: Saya tidak terlalu yakin saya sudah mengimplementasi F.I.R.S.T. principle secara menyeluruh. Namun, saya sudah beberapa mengikuti F.I.R.S.T. principle seperti membagi test menjadi unit test dan functional test. Test saya juga mencakup _happy_ dan _unhappy_ paths dan juga kemungkinan hasil dan errornya.
+
+
+
+
