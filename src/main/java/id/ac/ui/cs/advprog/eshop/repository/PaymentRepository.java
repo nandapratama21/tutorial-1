@@ -21,6 +21,7 @@ public class PaymentRepository {
             }
             i++;
         }
+
         paymentData.add(payment);
         return payment;
 
@@ -33,5 +34,9 @@ public class PaymentRepository {
             }
         }
         return null;
+    }
+
+    public List<Payment> findAll() {
+        return paymentData;
     }
 }
