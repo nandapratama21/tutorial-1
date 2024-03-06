@@ -15,6 +15,6 @@ class HomePageControllerTest {
         String viewName = homePageController.Homepage();
 
         // Assert
-        assertEquals("Homepage", viewName);
+        assertEquals("HomePage", viewName);
     }
 }
